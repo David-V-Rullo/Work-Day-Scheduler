@@ -38,7 +38,7 @@ function renderTimes(timeBlockArr) {
 }
 
 $(".col-md-1.btn-outline-success").on("click", function () {
-    event.preventDefault()
+  event.preventDefault();
   //Look to the block where user clicked save and place values of description and time in variables.
   var userInput = $(this).prev().val();
   var userTime = $(this).parent().attr("id");
@@ -46,13 +46,16 @@ $(".col-md-1.btn-outline-success").on("click", function () {
   //Place the user input and time into local storage
   localStorage.setItem(userTime, userInput);
 });
-   
-function loadItems() {
-  for (i = 8; i === 17; i++) {
-    $("#" + i).sibling("#text-content").val(localStorage.getItem(i.value));
-    console.log($("#" + i).sibling("#text-content").val())
-  }
-}
 
 renderTimes();
-loadItems()
+
+$("#8 .description").val(localStorage.getItem("8"));
+$("#9 .description").val(localStorage.getItem("9"));
+$("#10 .description").val(localStorage.getItem("10"));
+$("#11 .description").val(localStorage.getItem("11"));
+$("#12 .description").val(localStorage.getItem("12"));
+$("#13 .description").val(localStorage.getItem("13"));
+$("#14 .description").val(localStorage.getItem("14"));
+$("#15 .description").val(localStorage.getItem("15"));
+$("#16 .description").val(localStorage.getItem("16"));
+$("#17 .description").val(localStorage.getItem("17"));
