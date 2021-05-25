@@ -2,6 +2,8 @@
 var currentDate = moment().format("dddd MMM Do, YYYY");
 var currentTime = moment().format("hh:mm a ");
 var currentHour = moment().hour();
+
+console.log(currentDate)
 //Find the time and date elements
 var timeEl = $("#currentTime");
 var dateEL = $("#currentDay");
